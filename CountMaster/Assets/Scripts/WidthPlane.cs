@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class WidthPlane : MonoBehaviour
 {
-    public Renderer rend;
-
+    private Renderer _rend;
     public static float width;
-    void Start()
+    
+   private void Start()
     {
-        rend = GetComponent<Renderer>();
-        width = rend.bounds.extents.magnitude;
-        Debug.Log(width);
+        _rend = GetComponent<Renderer>();
+        width = _rend.bounds.extents.magnitude;
     }
     
     

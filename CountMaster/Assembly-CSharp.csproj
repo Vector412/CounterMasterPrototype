@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Dead.cs" />
      <Compile Include="Assets\Scripts\Moving.cs" />
      <Compile Include="Assets\Scripts\WidthPlane.cs" />
+     <Compile Include="Assets\AIController.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

@@ -11,14 +11,17 @@ public class TouchHandle : MonoBehaviour
     [SerializeField] float controlSpeed;
     [SerializeField] bool isTouching;
     
+    [Header("Доп смещение левой и правой границы")]
+    [SerializeField] private float offset;
+    
     float _touchPosX;
     Vector3 _direction;
-
+    private float border;
     private ChunkPlacer _chunkPlacer;
 
     private void Start()
     {
-       // _chunkPlacer = GetComponent<ChunkPlacer>();
+        border = WidthPlane.width / 2 + offset;
     }
 
     void Update()
@@ -38,9 +41,7 @@ public class TouchHandle : MonoBehaviour
         }
 
         
-     //   if(_touchPosX < _chunkPlacer.WidthObject())
-      //  if (_touchPosX > 0 && _touchPosX < 4 || _touchPosX < 0 && _touchPosX > -4)
-      if(_touchPosX > -WidthPlane.width/2 && _touchPosX < WidthPlane.width/2)
+      if(_touchPosX > -border && _touchPosX < border)
         {
             transform.position = new Vector3(_touchPosX, transform.position.y, transform.position.z);
         }

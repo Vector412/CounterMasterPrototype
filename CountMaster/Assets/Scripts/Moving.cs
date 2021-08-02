@@ -12,7 +12,7 @@ public class Moving : MonoBehaviour
     private Stop stop;
     private IEnumerator coroutine;
     
-    /*private void Awake()
+    private void Awake()
     {
         coroutine = Running();
         stop = StopPlayer;
@@ -22,9 +22,9 @@ public class Moving : MonoBehaviour
     private void StopPlayer()
     {
       StopCoroutine(coroutine);
-    }*/
+    }
 
-  /*private  IEnumerator Running()
+  private  IEnumerator Running()
     {
         var tiempoMov = 1.0f;
         var startTime = Time.deltaTime;
@@ -34,5 +34,5 @@ public class Moving : MonoBehaviour
             transform.Translate(Vector3.forward * step);
             yield return null;
         }
-    }*/
+    }
 }
