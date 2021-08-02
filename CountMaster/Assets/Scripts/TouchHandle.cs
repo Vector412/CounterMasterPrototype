@@ -9,13 +9,17 @@ public class TouchHandle : MonoBehaviour
 {  
     [SerializeField] PlayerManager playerManager;
     [SerializeField] float controlSpeed;
-
-    //Touch Settings
     [SerializeField] bool isTouching;
-    float touchPosX;
-    Vector3 direction;
+    
+    float _touchPosX;
+    Vector3 _direction;
 
+    private ChunkPlacer _chunkPlacer;
 
+    private void Start()
+    {
+       // _chunkPlacer = GetComponent<ChunkPlacer>();
+    }
 
     void Update()
     {
@@ -28,13 +32,23 @@ public class TouchHandle : MonoBehaviour
         {
             transform.position += Vector3.forward * Moving.speed * Time.fixedDeltaTime;
         }
-        if(isTouching)
+        if(isTouching )
         {
-            touchPosX += Input.GetAxis("Mouse X") * controlSpeed *Time.fixedDeltaTime;
+            _touchPosX += Input.GetAxis("Mouse X") * controlSpeed *Time.fixedDeltaTime;
         }
 
-        transform.position = new Vector3(touchPosX, transform.position.y, transform.position.z);
+        
+     //   if(_touchPosX < _chunkPlacer.WidthObject())
+      //  if (_touchPosX > 0 && _touchPosX < 4 || _touchPosX < 0 && _touchPosX > -4)
+      if(_touchPosX > -WidthPlane.width/2 && _touchPosX < WidthPlane.width/2)
+        {
+            transform.position = new Vector3(_touchPosX, transform.position.y, transform.position.z);
+        }
+
+        
     }
+
+
 
     void GetInput()
     {

@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ChunkPlacer : MonoBehaviour
 {
@@ -8,19 +10,25 @@ public class ChunkPlacer : MonoBehaviour
 
     public Chunk[] chunkPrefabs;
     public Chunk firstChunk;
+
+    private Renderer _rend;
     
 
-    private List<Chunk> spawnedChunks = new List<Chunk>();
+    private List<Chunk> _spawnedChunks = new List<Chunk>();
     // Start is called before the first frame update
+  
+
     void Start()
     {
-        spawnedChunks.Add(firstChunk);
+        _rend = GetComponent<Renderer>();
+        _spawnedChunks.Add(firstChunk);
+     
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.position.z > spawnedChunks[spawnedChunks.Count - 1].end.position.z - 20)
+        if (player.position.z > _spawnedChunks[_spawnedChunks.Count - 1].end.position.z - 20)
         {
             SpawnChunk();
         }
@@ -30,14 +38,21 @@ public class ChunkPlacer : MonoBehaviour
     {
       
             Chunk newChunk =  Instantiate(chunkPrefabs[Random.Range(0, chunkPrefabs.Length)]);
-            newChunk.transform.position = spawnedChunks[spawnedChunks.Count- 1].end.position - newChunk.begin.localPosition ;
-            spawnedChunks.Add(newChunk);
+            newChunk.transform.position = _spawnedChunks[_spawnedChunks.Count- 1].end.position - newChunk.begin.localPosition ;
+            _spawnedChunks.Add(newChunk);
         
         
-       if (spawnedChunks.Count >= 5)
+       if (_spawnedChunks.Count >= 5)
        {
-           Destroy(spawnedChunks[0].gameObject);
-           spawnedChunks.RemoveAt(0);
+           Destroy(_spawnedChunks[0].gameObject);
+           _spawnedChunks.RemoveAt(0);
        }
     }
+
+
+    /*public float WidthObject()
+    {
+        /*chunkPrefabs[0] = _rend.bounds.extents.magnitude;
+        return width;#1#
+    }*/
 }
