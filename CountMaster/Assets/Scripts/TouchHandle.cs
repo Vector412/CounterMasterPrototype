@@ -40,9 +40,10 @@ public class TouchHandle : MonoBehaviour
             _touchPosX += Input.GetAxis("Mouse X") * controlSpeed *Time.fixedDeltaTime;
         }
 
-        
+      
       if(_touchPosX > -border && _touchPosX < border)
         {
+            Debug.Log(_touchPosX);
             transform.position = new Vector3(_touchPosX, transform.position.y, transform.position.z);
         }
 

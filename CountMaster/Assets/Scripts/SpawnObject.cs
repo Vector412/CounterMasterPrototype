@@ -1,12 +1,17 @@
-
 using System.Collections;
 using UnityEngine;
 
 public class SpawnObject : MonoBehaviour
 {
-    [Tooltip("Персы которые будут спауниться")] [SerializeField] private GameObject[] resources;
-    [Tooltip("Радиус в котором будут спауниться персы")] [SerializeField] private float radius;
+    [Tooltip("Персы которые будут спауниться")] [SerializeField]
+    private GameObject[] resources;
 
+    [Tooltip("Радиус в котором будут спауниться персы")] [SerializeField]
+    private float radius;
+
+   [SerializeField] private Transform parentObj;
+
+    private int _count = 0;
 
     private void Start()
     {
@@ -14,7 +19,7 @@ public class SpawnObject : MonoBehaviour
         Debug.Log(2);
         transform.position = new Vector3(transform.position.x, 0, 0);
     }
-    
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
@@ -33,18 +38,17 @@ public class SpawnObject : MonoBehaviour
 
     private void Spawner()
     {
-        if (resources != null && resources.Length > 0)
+        _count++;
+        if (resources != null && resources.Length > 0 && _count < 10)
         {
             Debug.Log(1);
-            
+
             var randomResources = Random.Range(0, resources.Length);
-          
-                Vector2 randomPoint = Random.insideUnitCircle * radius;
-                Vector3 pos = transform.position  + new Vector3(randomPoint.x + 0.5f, 0, randomPoint.y + 0.5f);
-                Instantiate(resources[randomResources], pos, Quaternion.identity);
-        
 
+            Vector2 randomPoint = Random.insideUnitCircle * radius;
+            Vector3 pos = transform.position + new Vector3(randomPoint.x + 0.5f, 0, randomPoint.y + 0.5f);
+
+            var b = Instantiate(resources[randomResources], pos, Quaternion.identity, parentObj);
         }
-
     }
 }
