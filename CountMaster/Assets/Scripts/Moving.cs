@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Moving : MonoBehaviour
 {
-    [SerializeField] Transform _target;
     public static float speed = 4;
 
     private delegate void Stop();
