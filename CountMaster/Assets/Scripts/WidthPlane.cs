@@ -9,6 +9,7 @@ public class WidthPlane : MonoBehaviour
     
    private void Start()
     {
+        
         _rend = GetComponent<Renderer>();
         width = _rend.bounds.extents.magnitude;
     }
