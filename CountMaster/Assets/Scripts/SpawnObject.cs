@@ -14,6 +14,7 @@ public class SpawnObject : MonoBehaviour
 
     [SerializeField] private Transform transformParent;
 
+    private int _countPlayers = 0;
     
     private void Start()
     {
@@ -36,14 +37,16 @@ public class SpawnObject : MonoBehaviour
 
     private void Spawner()
     {
-        if (characterPrefab != null )
+        if (characterPrefab != null && _countPlayers < 60  )
         {
+            Debug.Log("3");
             for (int i = 0; i < wayPoints.Count; i++)
             {
+                _countPlayers++;
                 /*Vector2 randomPoint = Random.insideUnitCircle * radius;
                 Vector3 pos = transform.position + new Vector3(randomPoint.x + 0.5f, 0, randomPoint.y + 0.5f);*/
 
-                var b = Instantiate(characterPrefab, wayPoints[i].transform.position, Quaternion.identity,transformParent);
+                var b = Instantiate(characterPrefab, wayPoints[i].transform.position, Quaternion.identity, transformParent);
             }
         }
     }
