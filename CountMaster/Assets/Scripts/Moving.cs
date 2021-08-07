@@ -7,21 +7,21 @@ public class Moving : MonoBehaviour
 {
     public static float speed = 4;
 
-    private delegate void Stop();
-    private Stop stop;
+  //  private delegate void Stop();
+  //  private Stop stop;
     private IEnumerator coroutine;
     
     private void Awake()
     {
         coroutine = Running();
-        stop = StopPlayer;
+       // stop = StopPlayer;
         StartCoroutine(coroutine);
     }
     
-    private void StopPlayer()
+    /*private void StopPlayer()
     {
       StopCoroutine(coroutine);
-    }
+    }*/
 
   private  IEnumerator Running()
     {

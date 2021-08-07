@@ -21,7 +21,10 @@ public class TouchHandle : MonoBehaviour
 
     private void Start()
     {
+        
+        Debug.Log(WidthPlane.width);
         border = WidthPlane.width / 2 + offset;
+        Debug.Log($"border: {border}");
     }
 
     void Update()

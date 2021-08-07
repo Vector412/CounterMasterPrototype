@@ -9,11 +9,14 @@ public class SpawnObject : MonoBehaviour
 
     [Tooltip("Радиус в котором будут спауниться персы")] [SerializeField]
     private float radius;
-
     [SerializeField] private List<GameObject> wayPoints = new List<GameObject>();
-
     [SerializeField] private Transform transformParent;
+    [SerializeField] private GameObject _donut;
+    
+   
 
+    public delegate void OnChangeCrowd();
+    private OnChangeCrowd changeCrowd;
     private int _countPlayers = 0;
     
     private void Start()
@@ -39,16 +42,15 @@ public class SpawnObject : MonoBehaviour
     {
         if (characterPrefab != null && _countPlayers < 60  )
         {
-            Debug.Log("3");
             for (int i = 0; i < wayPoints.Count; i++)
             {
                 _countPlayers++;
-                /*Vector2 randomPoint = Random.insideUnitCircle * radius;
-                Vector3 pos = transform.position + new Vector3(randomPoint.x + 0.5f, 0, randomPoint.y + 0.5f);*/
-
                 var b = Instantiate(characterPrefab, wayPoints[i].transform.position, Quaternion.identity, transformParent);
             }
         }
+
+        changeCrowd = ChangeScaleDonut;
+        changeCrowd();
     }
     
     
@@ -58,4 +60,28 @@ public class SpawnObject : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
+
+    private void ChangeScaleDonut()
+    {
+        
+        if (_countPlayers > 10 && _countPlayers < 30)
+        {
+            _donut.transform.localScale *= 1.5f;
+
+
+        }
+        else if(_countPlayers > 30 && _countPlayers < 50)
+        {
+           
+            _donut.transform.localScale *= 1.6f;
+               
+        }
+        else if(_countPlayers > 50 && _countPlayers < 60)
+        {
+            
+            _donut.transform.localScale *= 1.7f;
+               
+            
+        }
+    }
 }

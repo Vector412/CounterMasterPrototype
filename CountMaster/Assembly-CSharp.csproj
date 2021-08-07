@@ -46,13 +46,13 @@
      <Compile Include="Assets\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\ChunkPlacer.cs" />
      <Compile Include="Assets\AITest\AIController.cs" />
+     <Compile Include="Assets\Scripts\DownTo.cs" />
      <Compile Include="Assets\Scripts\Moving.cs" />
      <Compile Include="Assets\Scripts\SmoothCamera.cs" />
      <Compile Include="Assets\Scripts\Chunk.cs" />
      <Compile Include="Assets\Scripts\SpawnObject.cs" />
      <Compile Include="Assets\Scripts\TestNavMesh\AIController1.cs" />
      <Compile Include="Assets\Scripts\Dead.cs" />
-     <Compile Include="Assets\Scripts\DownTo.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
