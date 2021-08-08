@@ -66,8 +66,8 @@
     <Compile Include="Assets\Scripts\SmoothCamera.cs" />
     <Compile Include="Assets\Scripts\Chunk.cs" />
     <Compile Include="Assets\Scripts\SpawnObject.cs" />
-    <Compile Include="Assets\Scripts\Dead.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Axe_Controller.cs" />
+    <Compile Include="Assets\Scripts\Dead.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Spotted_cylinder_Controller.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -812,6 +812,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ToonyColorsPro.Runtime.csproj">
+      <Project>{28FA77C0-4920-8DED-6908-D09510D37935}</Project>
+      <Name>ToonyColorsPro.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{5608F8C2-AE85-9DA5-20C1-D2FF1ED4DD10}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="IngameDebugConsole.Editor.csproj">
       <Project>{F7464B8E-D0BC-CC2C-CDED-44FB73601323}</Project>
       <Name>IngameDebugConsole.Editor</Name>
@@ -819,14 +827,6 @@
     <ProjectReference Include="IngameDebugConsole.Runtime.csproj">
       <Project>{52C24417-C414-F8A6-65C1-1F5754D625B6}</Project>
       <Name>IngameDebugConsole.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
-      <Project>{5608F8C2-AE85-9DA5-20C1-D2FF1ED4DD10}</Project>
-      <Name>ToonyColorsPro.Demo.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Runtime.csproj">
-      <Project>{28FA77C0-4920-8DED-6908-D09510D37935}</Project>
-      <Name>ToonyColorsPro.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Editor.csproj">
       <Project>{5554B371-BAFF-06F8-37BD-AC0F95C36921}</Project>

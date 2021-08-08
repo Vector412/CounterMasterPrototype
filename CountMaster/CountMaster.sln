@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro2.Demo", "ToonyColorsPro2.Demo.csproj", "{8AEA4F01-0BCC-AEAC-087F-B4AF69BC3094}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{24E8559D-7AD4-0D1A-EB1B-CD7F3E7313DA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IngameDebugConsole.Runtime", "IngameDebugConsole.Runtime.csproj", "{52C24417-C414-F8A6-65C1-1F5754D625B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro2.Demo", "ToonyColorsPro2.Demo.csproj", "{8AEA4F01-0BCC-AEAC-087F-B4AF69BC3094}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro.Runtime", "ToonyColorsPro.Runtime.csproj", "{28FA77C0-4920-8DED-6908-D09510D37935}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IngameDebugConsole.Editor", "IngameDebugConsole.Editor.csproj", "{F7464B8E-D0BC-CC2C-CDED-44FB73601323}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro.Editor", "ToonyColorsPro.Editor.csproj", "{5554B371-BAFF-06F8-37BD-AC0F95C36921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IngameDebugConsole.Editor", "IngameDebugConsole.Editor.csproj", "{F7464B8E-D0BC-CC2C-CDED-44FB73601323}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro.Demo.Editor", "ToonyColorsPro.Demo.Editor.csproj", "{5608F8C2-AE85-9DA5-20C1-D2FF1ED4DD10}"
 EndProject
@@ -21,6 +21,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AEA4F01-0BCC-AEAC-087F-B4AF69BC3094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AEA4F01-0BCC-AEAC-087F-B4AF69BC3094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AEA4F01-0BCC-AEAC-087F-B4AF69BC3094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AEA4F01-0BCC-AEAC-087F-B4AF69BC3094}.Release|Any CPU.Build.0 = Release|Any CPU
 		{24E8559D-7AD4-0D1A-EB1B-CD7F3E7313DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{24E8559D-7AD4-0D1A-EB1B-CD7F3E7313DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24E8559D-7AD4-0D1A-EB1B-CD7F3E7313DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,22 +33,18 @@ Global
 		{52C24417-C414-F8A6-65C1-1F5754D625B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52C24417-C414-F8A6-65C1-1F5754D625B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52C24417-C414-F8A6-65C1-1F5754D625B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8AEA4F01-0BCC-AEAC-087F-B4AF69BC3094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8AEA4F01-0BCC-AEAC-087F-B4AF69BC3094}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8AEA4F01-0BCC-AEAC-087F-B4AF69BC3094}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AEA4F01-0BCC-AEAC-087F-B4AF69BC3094}.Release|Any CPU.Build.0 = Release|Any CPU
 		{28FA77C0-4920-8DED-6908-D09510D37935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{28FA77C0-4920-8DED-6908-D09510D37935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28FA77C0-4920-8DED-6908-D09510D37935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28FA77C0-4920-8DED-6908-D09510D37935}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7464B8E-D0BC-CC2C-CDED-44FB73601323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7464B8E-D0BC-CC2C-CDED-44FB73601323}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7464B8E-D0BC-CC2C-CDED-44FB73601323}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7464B8E-D0BC-CC2C-CDED-44FB73601323}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5554B371-BAFF-06F8-37BD-AC0F95C36921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5554B371-BAFF-06F8-37BD-AC0F95C36921}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5554B371-BAFF-06F8-37BD-AC0F95C36921}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5554B371-BAFF-06F8-37BD-AC0F95C36921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7464B8E-D0BC-CC2C-CDED-44FB73601323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7464B8E-D0BC-CC2C-CDED-44FB73601323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7464B8E-D0BC-CC2C-CDED-44FB73601323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7464B8E-D0BC-CC2C-CDED-44FB73601323}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5608F8C2-AE85-9DA5-20C1-D2FF1ED4DD10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5608F8C2-AE85-9DA5-20C1-D2FF1ED4DD10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5608F8C2-AE85-9DA5-20C1-D2FF1ED4DD10}.Release|Any CPU.ActiveCfg = Release|Any CPU
