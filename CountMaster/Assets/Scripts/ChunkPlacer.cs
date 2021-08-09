@@ -33,7 +33,7 @@ public class ChunkPlacer : MonoBehaviour
         }
     }
 
-    private void SpawnChunk()
+    public void SpawnChunk()
     {
         Chunk newChunk = Instantiate(chunkPrefabs[Random.Range(0, chunkPrefabs.Length)]);
        

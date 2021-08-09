@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3726219594532720800}
   - component: {fileID: 1464452402561803370}
   - component: {fileID: 2831012131671434719}
+  - component: {fileID: 7291870809189089146}
   m_Layer: 0
   m_Name: Spoetted_cylinder_obstacle
   m_TagString: Untagged
@@ -97,6 +98,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 1.85
+--- !u!136 &7291870809189089146
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104010568630945215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.98869187
+  m_Height: 2.1391485
+  m_Direction: 1
+  m_Center: {x: 0.1552428, y: 0.0025160313, z: 1.1270115}
 --- !u!1 &1206479687024123694
 GameObject:
   m_ObjectHideFlags: 0
