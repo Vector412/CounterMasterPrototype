@@ -20,17 +20,14 @@ public class Listener : MonoBehaviourSingleton<Listener>
    
    public void KillPlayers()
    {
-      Debug.Log("Killed");
       if (OnUpdateDonut != null)
       {
-         Debug.Log("Call check donut");
          OnUpdateDonut.Invoke();
       }
    }
 
    public void Multiplayers()
    {
-      Debug.Log("Multiplayer");
       if (OnUpdatePlayer != null)
       {
          OnUpdatePlayer?.Invoke();
