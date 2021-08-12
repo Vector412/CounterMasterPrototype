@@ -7,7 +7,7 @@ public class Counter : MonoBehaviour
 {
    public int count;
 
-   public event Action OnUpdatePlayers;
+   public event Action<int> OnUpdatePlayers;
    
   
    public int Count { get; set; }
@@ -24,7 +24,7 @@ public class Counter : MonoBehaviour
    private void OnTriggerEnter(Collider other)
    {
       Destroy(gameObject);
-      OnUpdatePlayers?.Invoke();
+      OnUpdatePlayers?.Invoke(count);
      
    }
 }

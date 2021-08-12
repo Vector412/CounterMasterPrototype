@@ -43,6 +43,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\WidthPlane.cs" />
      <Compile Include="Assets\Scripts\TouchHandle.cs" />
+     <Compile Include="Assets\Scripts\FinishGame.cs" />
      <Compile Include="Assets\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\ChunkPlacer.cs" />
      <Compile Include="Assets\AITest\AIController.cs" />
@@ -58,7 +59,6 @@
      <Compile Include="Assets\Scripts\Obstacles\Axe_Controller.cs" />
      <Compile Include="Assets\Scripts\Dead.cs" />
      <Compile Include="Assets\Scripts\Obstacles\Spotted_cylinder_Controller.cs" />
-     <Compile Include="Assets\Scripts\FinishGame.cs" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\SG2_Template_URP.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Triplanar Sampling.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\Dissolve.shader" />

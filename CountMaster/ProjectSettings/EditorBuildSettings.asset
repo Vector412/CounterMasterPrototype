@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SceneVitya.unity
+    guid: 1dd7fa982d2ef36478cae1dd9e45848a
   m_configObjects: {}

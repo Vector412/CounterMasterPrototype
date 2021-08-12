@@ -37,7 +37,7 @@ public class TouchHandle : MonoBehaviour
         }
 
       
-      if(_touchPosX > -border - offset && _touchPosX < border + offset)
+        if(_touchPosX > -border - offset && _touchPosX < border + offset)
         {
            
             transform.position = new Vector3(_touchPosX, transform.position.y, transform.position.z);

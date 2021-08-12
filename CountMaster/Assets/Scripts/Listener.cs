@@ -7,7 +7,7 @@ public class Listener : MonoBehaviourSingleton<Listener>
 {
   
    private event Action OnUpdateDonut;
-   private event Action OnUpdatePlayer;
+   private event Action<int> OnUpdatePlayer;
 
    private void Start()
    {
@@ -26,11 +26,11 @@ public class Listener : MonoBehaviourSingleton<Listener>
       }
    }
 
-   public void Multiplayers()
+   public void Multiplayers(int count)
    {
       if (OnUpdatePlayer != null)
       {
-         OnUpdatePlayer?.Invoke();
+         OnUpdatePlayer?.Invoke(count);
       }
    }
 

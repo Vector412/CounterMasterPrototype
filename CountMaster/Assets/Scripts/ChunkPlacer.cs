@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -25,7 +27,6 @@ public class ChunkPlacer : MonoBehaviour
     private void Start()
     {
         _tmpCountChunks = (int)Random.Range(_minValueChunks, _maxValueChunks);
-        Debug.Log(_tmpCountChunks);
         _spawnedChunks.Add(firstChunk);
         for (int i = 0; i < _tmpCountChunks; i++)
         {
@@ -51,49 +52,53 @@ public class ChunkPlacer : MonoBehaviour
 
     public void SpawnChunk()
     {
-        Transform tmp;
         _counterChunks++;
         if (_counterChunks != _tmpCountChunks)
         {
-            Chunk currentChunk = Instantiate(chunkPrefabs[Random.Range(0, chunkPrefabs.Length)]);
-       
-            
-            currentChunk.transform.position =
-                _spawnedChunks[_spawnedChunks.Count - 1].end.position - currentChunk.begin.localPosition;
-            _spawnedChunks.Add(currentChunk);
-
-            
-            
-            
-            
-         
+            Chunk currentChunk = Instantiate(GetRandomChunk());
+            CalculateNextChunk(currentChunk);
         }
         else
         {
             Chunk lastChunk = Instantiate(finishChunk);
-
-            lastChunk.transform.position =
-                _spawnedChunks[_spawnedChunks.Count - 1].end.position - lastChunk.begin.localPosition;
-            _spawnedChunks.Add(lastChunk);
+            CalculateNextChunk(lastChunk);
             
         }
+    }
 
 
+    private void CalculateNextChunk(Chunk chunk)
+    {
+        chunk.transform.position =
+            _spawnedChunks[_spawnedChunks.Count - 1].end.position - chunk.begin.localPosition;
+        _spawnedChunks.Add(chunk);
+    }
 
-
-   
-
-        /*if (_spawnedChunks.Count >= 5)
+    private Chunk GetRandomChunk()
+    {
+        List<float> chances = new List<float>();
+        for (int i = 0; i < chunkPrefabs.Length; i++)
         {
-            Destroy(_spawnedChunks[0].gameObject);
-            _spawnedChunks.RemoveAt(0);
-        }*/
-        
+            chances.Add(chunkPrefabs[i].chanceFromDistance.Evaluate(chunkPrefabs[i].transform.position.z));
+        }
+
+        float value = Random.Range(0, chances.Sum());
+        float sum = 0;
+        for (int i = 0; i < chances.Count; i++)
+        {
+            sum += chances[i];
+            if (value < sum)
+            {
+                return chunkPrefabs[i];
+            }
+        }
+
+        return chunkPrefabs[chunkPrefabs.Length - 1];
     }
     
-    
-   
 
 
- 
+
+
+
 }
