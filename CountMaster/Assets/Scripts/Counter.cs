@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Counter : MonoBehaviour
 {
+    private string _mainPlayer = "MainPlayer";
    public int count;
 
    public event Action<int> OnUpdatePlayers;
@@ -16,15 +17,18 @@ public class Counter : MonoBehaviour
    {
        Count = count;
        OnUpdatePlayers += Listener.Instance.Multiplayers;
-
-
-
    }
 
    private void OnTriggerEnter(Collider other)
    {
-      Destroy(gameObject);
-      OnUpdatePlayers?.Invoke(count);
+       if (other.gameObject.CompareTag(_mainPlayer))
+       {
+           Destroy(gameObject);
+           OnUpdatePlayers?.Invoke(count);
+       }
+       
+
+     
      
    }
 }

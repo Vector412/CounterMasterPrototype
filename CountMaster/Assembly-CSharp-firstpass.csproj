@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{014fea8a-cc0b-acae-087f-b4af69bc3094}</ProjectGuid>
+    <ProjectGuid>{cc61162a-1db4-a7be-8a71-69f61325d613}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>ToonyColorsPro2.Demo</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -41,55 +41,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_Camera.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_GammaLinear.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Common Demo Assets\Scripts\TCP2_Demo_InvertedMaskImage.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo_View.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Common Demo Assets\Scripts\TCP2_Demo_AnimateMaterial.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_Cat.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Common Demo Assets\Scripts\TCP2_Demo_Interactive_Environment.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Common Demo Assets\Kino Bloom\Bloom.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo_PBS.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Common Demo Assets\Scripts\TCP2_Demo_Interactive_Content.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\SG2 Demo Assets\_Misc\TCP2_Demo_AutoRotate.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo_PBS_View.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Common Demo Assets\Scripts\TCP2_Demo_Interactive.cs" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Code Injection Example.cginc" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 3 Skin.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 3.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Material Layers Demo Assets\Shaders\Snow Sand Advanced.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Material Layers Demo Assets\Shaders\Snow Y Position Based.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 6.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 4.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Water.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 4.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Decal.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Vertex Colors.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnlitVertexColorsTransparent.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\UnityChan License.txt" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\SG Demo Assets\_Misc Assets\TCP2_Demo_3DText.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Material Layers Demo Assets\Shaders\Snow Texture Based.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 6.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 1.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Cubemaps\Cubemaps License.txt" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Vertex Colors Emissive.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 5 Skin.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Common Demo Assets\Kino Bloom\Shader\Bloom.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 4 Skin.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Common Demo Assets\Kino Bloom\Shader\Bloom.cginc" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 1 Skin.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 6 Skin.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Ground.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Material Layers Demo Assets\Shaders\Snow Normal Based.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 3.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Vertex Colors Specular.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Common Demo Assets\Kino Bloom\Kino Bloom License.txt" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 5.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\ToonyColorsPro.Demo.asmdef" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 1.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 5.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 2.shader" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+     <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -312,32 +272,11 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.Graphs">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.WebGL.Extensions">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.Android.Extensions">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
-     <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="clipper_library">
      <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/PackageCache/com.unity.cinemachine@2.7.5/Runtime/ThirdParty/clipper_library.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTweenEditor">
-     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
      </Reference>
      <Reference Include="DOTween">
      <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
@@ -687,17 +626,94 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.VisualScripting.Flow.Editor">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Recorder.Editor">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Recorder.Base">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro.Editor">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core.Editor">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State.Editor">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="VSSettingsProvider">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/VSSettingsProvider.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Recorder">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="ToonyColorsPro.Runtime.csproj">
       <Project>{c077fa28-2049-ed8d-6908-d09510d37935}</Project>
       <Name>ToonyColorsPro.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{c2f80856-85ae-a59d-20c1-d2ff1ed4dd10}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Editor.csproj">
+      <Project>{8e4b46f7-bcd0-2ccc-cded-44fb73601323}</Project>
+      <Name>IngameDebugConsole.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Runtime.csproj">
+      <Project>{1744c252-14c4-a6f8-65c1-1f5754d625b6}</Project>
+      <Name>IngameDebugConsole.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Editor.csproj">
+      <Project>{71b35455-ffba-f806-37bd-ac0f95c36921}</Project>
+      <Name>ToonyColorsPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro2.Demo.csproj">
+      <Project>{014fea8a-cc0b-acae-087f-b4af69bc3094}</Project>
+      <Name>ToonyColorsPro2.Demo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

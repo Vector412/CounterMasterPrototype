@@ -9,6 +9,10 @@ public class Axe_Controller : MonoBehaviour, IObstacles
     private float yRot = 45f;
 
     private Transform localTransform;
+    
+    private string mainPlayer = "MainPlayer";
+    public event Action OnKill;
+    public event Action OnGameOver;
     private void Start()
     {
         localTransform = GetComponent<Transform>();
@@ -20,9 +24,22 @@ public class Axe_Controller : MonoBehaviour, IObstacles
         //Quaternion.SlerpUnclamped(transform.rotation.ToEuler(0,0,-90), (0,0,90), _speed);
     }
 
-    public void DestroyObjects(Collider col)
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (gameObject && !other.CompareTag(mainPlayer))
+        {
+            DestroyObjects(other);
+        }
+        else if(other.CompareTag(mainPlayer))
+        {
+            OnGameOver?.Invoke();
+        }
+    }
+    
+    public  void DestroyObjects(Collider col)
+    {
+        Destroy(col.gameObject);
+        OnKill?.Invoke();
     }
 
     public void Moving()
