@@ -1,4 +1,5 @@
 using System;
+using 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,8 @@ using UnityEngine;
 public class Counter : MonoBehaviour
 {
     private string _mainPlayer = "MainPlayer";
-   public int count;
-
+    public int count;
+    
    public event Action<int> OnUpdatePlayers;
    
   
