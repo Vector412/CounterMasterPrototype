@@ -37,10 +37,10 @@ public class Spotted_cylinder_Controller : MonoBehaviour, IObstacles
         {
             DestroyObjects(other);
         }
-        else if(other.CompareTag(mainPlayer))
+        /*else if(other.CompareTag(mainPlayer))
         {
             OnGameOver?.Invoke();
-        }
+        }*/
     }
     
     public  void DestroyObjects(Collider col)
