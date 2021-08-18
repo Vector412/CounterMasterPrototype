@@ -9,7 +9,7 @@ using Vector3 = UnityEngine.Vector3;
 
 public class Axe_Controller : MonoBehaviour, IObstacles
 {
-   
+    public GameObject axe_handle;
     private string mainPlayer = "MainPlayer";
     public event Action OnKill;
     public event Action OnGameOver;
@@ -44,8 +44,9 @@ public class Axe_Controller : MonoBehaviour, IObstacles
     public void Moving()
     {
         float angle = Mathf.Sin(Time.time) * 60; //tweak this to change frequency
-        
 
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);
+        axe_handle.transform.localRotation = Quaternion.AngleAxis(angle, Vector3.up);
+
+        
     }
 }
