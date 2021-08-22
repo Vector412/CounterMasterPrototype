@@ -88,6 +88,18 @@
     <Compile Include="Assets\Scripts\Dead.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Spotted_cylinder_Controller.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Obstacles\Hammer_Controller.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -98,6 +110,7 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Standard PBS\TCP2_Standard PBS Outline.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\Include\TCP2_Outline_Behind_SM2.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
      <None Include="Assets\Epic Toon FX\Prefabs\Combat\Combat FX.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_VertexDisplacement.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Outline.txt" />
@@ -107,6 +120,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_DepthTexture.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\Variants Base\TCP2_Mobile_Specular_OutlineBlending.shader" />
+     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX Free.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\SG2\Vertex Color Albedo.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_MatCap.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\HSV.shader" />
@@ -123,6 +137,7 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_ShadowHSV.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\Variants Base\TCP2_Desktop_OutlineBlending.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_Water.txt" />
+     <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\SG2_Template_Default.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\Snow Accumulation.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -186,6 +201,7 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_PBS.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\Sketch.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Standard PBS\TCP2_PBS_ShadowMeta.shader" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\TCP2_Mobile.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Lava Cartoon.shader" />
