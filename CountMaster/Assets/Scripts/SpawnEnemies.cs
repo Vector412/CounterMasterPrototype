@@ -1,47 +1,56 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SpawnEnemies : MonoBehaviour
 {
     [SerializeField] private List<GameObject> wayPoints = new List<GameObject>();
 
-    public GameObject enemiesPrefab;
-    public float _minValue;
-    public float _maxValue;
+    [SerializeField] public GameObject enemiesPrefab;
+    [SerializeField] public float _minValue;
+    [SerializeField] public float _maxValue;
 
+    [SerializeField] private Transform parent;
+   
     private int _countEnemies = 0;
-    
-    // Start is called before the first frame update
+
+
     void Start()
     {
-        StartCoroutine(CreateEnemies());
+      CreateEnemies();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    public IEnumerator CreateEnemies()
+    public void CreateEnemies()
     {
-          yield return new WaitForSeconds(3);
-        var _tmp = (int)Random.Range(_minValue, _maxValue);
+        var _tmp = (int) Random.Range(_minValue, _maxValue);
         _tmp *= 5;
         Debug.Log(_tmp);
-      
-     
-        while (_tmp > _countEnemies )
+
+
+        while (_tmp > _countEnemies)
         {
             for (int i = 0; i < wayPoints.Count; i++)
             {
-                var b = Instantiate(enemiesPrefab, wayPoints[i].transform.position, Quaternion.identity);
+                var b = Instantiate(enemiesPrefab, wayPoints[i].transform.position, Quaternion.identity, parent);
                 _countEnemies++;
             }
-
-           
         }
     }
+    
+    
+
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("MainPlayer") )
+        {
+           
+        }
+    }*/
+
+
+ 
 }

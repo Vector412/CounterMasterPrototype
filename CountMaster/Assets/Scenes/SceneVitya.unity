@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44300616, g: 0.49219483, b: 0.57192373, a: 1}
+  m_IndirectSpecularColor: {r: 0.44300658, g: 0.4921953, b: 0.57192475, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -531,11 +531,11 @@ MonoBehaviour:
   player: {fileID: 1654312628}
   chunkPrefabs:
   - {fileID: 2141564182468553873, guid: b0267d557b57bc64ca7eb5f7a1ac4ac4, type: 3}
-  - {fileID: 2141564182468553873, guid: d80f23bc8b0b77640a479807fc320cbf, type: 3}
   - {fileID: 2141564182468553873, guid: e9793c896e2a76f4b88e5c7de8691fb0, type: 3}
-  - {fileID: 2141564182468553873, guid: cb8ed0a07da71f14e84eda99ba1b3ef9, type: 3}
-  - {fileID: 2141564182468553873, guid: 4ca795ff7769c9c4e87eb926250fab8a, type: 3}
-  - {fileID: 2141564182468553873, guid: 1c3e68328968d4649827e8d68c97515b, type: 3}
+  - {fileID: 2141564182468553873, guid: e9793c896e2a76f4b88e5c7de8691fb0, type: 3}
+  - {fileID: 2141564182468553873, guid: e9793c896e2a76f4b88e5c7de8691fb0, type: 3}
+  - {fileID: 2141564182468553873, guid: e9793c896e2a76f4b88e5c7de8691fb0, type: 3}
+  - {fileID: 2141564182468553873, guid: e9793c896e2a76f4b88e5c7de8691fb0, type: 3}
   firstChunk: {fileID: 2141564184350252821}
   finishChunk: {fileID: 4855265173769847454, guid: a46d259012daef84a8eebea5d8356beb, type: 3}
   _minValueChunks: 7
@@ -615,7 +615,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.5625, y: 1}
+    m_SensorSize: {x: 1.7117904, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
