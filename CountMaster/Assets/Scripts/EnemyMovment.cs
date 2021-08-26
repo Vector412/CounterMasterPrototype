@@ -6,49 +6,45 @@ using UnityEngine;
 public class EnemyMovment : MonoBehaviour
 {
     [SerializeField] public float speed;
-    public GameObject target;
-    public GameObject  enemy;
+    [SerializeField] private float maxDistace;
+    [SerializeField] GameObject enemy;
 
+    private GameObject target;
     private float dist;
+
+    public event Action OnMoving;
+
+    private IEnumerator checkDistace;
+
     private void Awake()
     {
-       // StartCoroutine(CountTime());
+        OnMoving += Moving;
+        target = GameObject.FindWithTag("Player");
     }
 
-    void Update()
+    private void Start()
     {
-        dist = Vector3.Distance(target.transform.position, enemy.transform.position);
-        if (dist < 30)
-        {
-            Moving();
-        }
-       // Moving();
+        checkDistace = CheckDistace();
+        StartCoroutine(checkDistace);
     }
 
+    IEnumerator CheckDistace()
+    {
+        while (true)
+        {
+            dist = Vector3.Distance(target.transform.position, enemy.transform.position);
+            if (dist < maxDistace)
+            {
+                OnMoving?.Invoke();
+            }
+
+            yield return null;
+        }
+    }
+    
     public void Moving()
     {
         float step = speed * Time.deltaTime;
         enemy.transform.Translate(Vector3.back * step);
     }
-
-    /*IEnumerator CountTime()
-    {
-       
-        while (true)
-        {
-            
-            if (dist < 30)
-            {
-                Debug.Log(111);
-                Moving();
-              
-            }
-            yield return new WaitForSeconds(1);
-        }
-        
-        
-            
-    }*/
-
-
 }

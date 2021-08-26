@@ -223,8 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f1de7f876341248a041f44ea862dab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  target: {fileID: 6953157231929948327, guid: 7e01e0309dbe685408e4c002277374a0, type: 3}
+  speed: 5
+  maxDistace: 10
   enemy: {fileID: 8643506617381155373}
 --- !u!1 &8772919747619354012
 GameObject:

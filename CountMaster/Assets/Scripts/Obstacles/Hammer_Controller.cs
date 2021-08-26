@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,11 +14,18 @@ public class Hammer_Controller : MonoBehaviour, IObstacles
     private void Awake()
     {
         hammerController = GetComponentInChildren<Animator>();
-       
-
     }
 
     private void Start()
+    {
+      Moving();
+    }
+    public void DestroyObjects(Collider col)
+    {
+      
+    }
+
+    public void Moving()
     {
         if (left && !right)
         {
@@ -31,15 +39,17 @@ public class Hammer_Controller : MonoBehaviour, IObstacles
             hammerController.SetBool("Right", true);
         }
     }
-    public void DestroyObjects(Collider col)
-    {
-        throw new System.NotImplementedException();
-    }
 
-    public void Moving()
-    {
-        throw new System.NotImplementedException();
-    }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+      
+        if (other.gameObject.CompareTag("Player"))
+        {
+           
+            Destroy(other.gameObject);
+        }
+
+       
+    }
 }
