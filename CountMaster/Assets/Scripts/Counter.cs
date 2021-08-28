@@ -8,15 +8,12 @@ public class Counter : MonoBehaviour
     private string _mainPlayer = "MainPlayer";
     public int count;
     
-   public event Action<int> OnUpdatePlayers;
-   
-  
-   public int Count { get; set; }
+   public int Count { get; private  set; }
 
    private void Start()
    {
        Count = count;
-       OnUpdatePlayers += Listener.Instance.Multiplayers;
+      
    }
 
    private void OnTriggerEnter(Collider other)
@@ -24,7 +21,7 @@ public class Counter : MonoBehaviour
        if (other.gameObject.CompareTag(_mainPlayer))
        {
            Destroy(gameObject);
-           OnUpdatePlayers?.Invoke(count);
+           EventManager.OnAddPlayer(count);
        }
        
 

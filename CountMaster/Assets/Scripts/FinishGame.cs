@@ -11,8 +11,8 @@ public class FinishGame : MonoBehaviour
     {
         if (other.GameObject())
         {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
+            
+            EventManager.GameEnd();
         }
 
       

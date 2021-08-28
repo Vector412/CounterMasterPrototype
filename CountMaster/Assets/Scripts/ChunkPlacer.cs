@@ -50,6 +50,7 @@ public class ChunkPlacer : MonoBehaviour
         }
     }
 
+    
     public void SpawnChunk()
     {
         _counterChunks++;
@@ -65,6 +66,7 @@ public class ChunkPlacer : MonoBehaviour
             
         }
     }
+    
 
 
     private void CalculateNextChunk(Chunk chunk)

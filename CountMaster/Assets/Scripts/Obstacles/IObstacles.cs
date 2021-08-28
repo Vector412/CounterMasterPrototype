@@ -4,9 +4,6 @@ using UnityEngine;
 
 public interface  IObstacles
 {
-   public void DestroyObjects(Collider col);
-
-
    public void Moving();
 
 

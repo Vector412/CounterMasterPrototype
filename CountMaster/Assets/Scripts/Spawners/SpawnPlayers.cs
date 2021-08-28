@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class SpawnObject : MonoBehaviour
+public class SpawnPlayers : MonoBehaviour
 {
     [SerializeField] private GameObject characterPrefab;
 
@@ -16,23 +16,13 @@ public class SpawnObject : MonoBehaviour
     [SerializeField] private Transform transformParent;
     [SerializeField] private GameObject _donut;
 
-  
-
-    public event Action OnCheckDonut;
-
-  
     
-
-    public delegate void OnChangeCrowd();
-
-    private OnChangeCrowd changeCrowd;
     private int _countPlayers = 0;
-    private int _allPlayers = 0;
+
 
     private void Awake()
     {
-      
-        OnCheckDonut += ChangeScaleDonut;
+        EventManager.AddPlayers += Spawner;
     }
 
     private void Start()
@@ -40,13 +30,11 @@ public class SpawnObject : MonoBehaviour
         if(characterPrefab != null)
         {
             transform.position = new Vector3(transform.position.x, 0, 0);
-        }
-        
-       
+        } 
     }
 
     
-    public void Spawner(int count)
+    private void Spawner(int count)
     {
         _countPlayers = 0;
         if (count < wayPoints.Count)
@@ -54,8 +42,7 @@ public class SpawnObject : MonoBehaviour
             var remainder = wayPoints.Count - count;
             for (int i = 0; i < remainder ; i++)
             {
-               // wayPoints[i].SetActive(false);
-               wayPoints.RemoveAt(0);
+                wayPoints.RemoveAt(0);
             }
         }
         while (_countPlayers < count)
@@ -69,52 +56,21 @@ public class SpawnObject : MonoBehaviour
                 _countPlayers++;
             }
         }
-      
-         _allPlayers += _countPlayers;
-         changeCrowd = ChangeScaleDonut;
-        changeCrowd();
-
-      
+        
     }
-
-
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
-
-    public void ChangeScaleDonut()
-    {
-        
-        if (_allPlayers < 15)
-        {
-            _donut.transform.localScale = new Vector3(3.5f, 3.5f, 1);
-        }
-        if (_allPlayers > 15 && _allPlayers < 30)
-        {
-            _donut.transform.localScale = new Vector3(5f, 5f, 1);
-        }
-        else if (_allPlayers > 30 && _allPlayers < 40)
-        {
-            _donut.transform.localScale = new Vector3(6, 6, 1);
-        }
-        else if (_allPlayers > 40 && _allPlayers < 60)
-        {
-            _donut.transform.localScale = new Vector3(6.5f, 6.5f, 1);
-        }
-    }
-
-    public void CheckScaleDonut()
-    {
-        ChangeScaleDonut();
-        _allPlayers--;
-    }
     
-    public void CreatePlayers(int count)
+
+    private void OnDestroy()
     {
-        Debug.Log($"count from wall: {count}");
-        Spawner(count);
+        EventManager.AddPlayers -= Spawner;
     }
+
+   
 }

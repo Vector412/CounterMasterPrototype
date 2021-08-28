@@ -10,14 +10,8 @@ public class Dead : MonoBehaviour
         Debug.Log(1);
         if (other.gameObject.CompareTag("Enemy"))
             Destroy(other.gameObject);
-        GameOver();
-      
 
     }
-
-    public void GameOver()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    
 
 }

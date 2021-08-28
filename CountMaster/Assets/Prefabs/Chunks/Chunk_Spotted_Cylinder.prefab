@@ -777,6 +777,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spoetted_cylinder_obstacle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1104010568630945215, guid: 5882a01fcd383ba468f601630f1aec26, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206479687024123694, guid: 5882a01fcd383ba468f601630f1aec26, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5882a01fcd383ba468f601630f1aec26, type: 3}
 --- !u!4 &9156307573464291235 stripped
@@ -838,6 +846,14 @@ PrefabInstance:
     - target: {fileID: 1104010568630945215, guid: 5882a01fcd383ba468f601630f1aec26, type: 3}
       propertyPath: m_Name
       value: Spoetted_cylinder_obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104010568630945215, guid: 5882a01fcd383ba468f601630f1aec26, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206479687024123694, guid: 5882a01fcd383ba468f601630f1aec26, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5882a01fcd383ba468f601630f1aec26, type: 3}
