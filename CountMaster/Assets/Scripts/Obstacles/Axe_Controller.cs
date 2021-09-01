@@ -14,9 +14,7 @@ public class Axe_Controller : MonoBehaviour, IObstacles
     public event Action OnKill;
     public event Action OnGameOver;
 
-    private void Start()
-    {
-    }
+  
 
     void Update()
     {

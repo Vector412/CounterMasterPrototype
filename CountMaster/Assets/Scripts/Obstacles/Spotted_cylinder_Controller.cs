@@ -9,14 +9,19 @@ public class Spotted_cylinder_Controller : MonoBehaviour, IObstacles
     public float _speed;
     private float speed;
     private string mainPlayer = "MainPlayer";
- 
-    
+
+    private int killedPlayersCount= 0;
     private GameObject container = null;
     
+    public delegate void OnKill(int count);
+
+    private OnKill kill;
     private void Awake()
     {
-        EventManager.MinusPlayers += EventAboutDestroy;
+        kill = EventAboutDestroy;
+       // EventManager.UpdatePlayerCount += EventAboutDestroy;
     }
+    
 
     private void Start()
     {
@@ -33,20 +38,26 @@ public class Spotted_cylinder_Controller : MonoBehaviour, IObstacles
     {
         if (gameObject && !other.CompareTag(mainPlayer))
         {
+            killedPlayersCount++;
             Destroy(other.gameObject);
-         //   EventAboutDestroy();
-           
+            if (killedPlayersCount > 10)
+            {
+                kill(killedPlayersCount);
+            }
         }
         /*else if(other.CompareTag(mainPlayer))
         {
             OnGameOver?.Invoke();
         }*/
     }
+    
 
-    private void EventAboutDestroy()
+    
+    private void EventAboutDestroy(int count)
     {
-       // EventManager.OnMinusPlayers();
+        EventManager.OnUpdatePlayerCount(count, false);
     }
+    
 
 
 
@@ -58,3 +69,5 @@ public class Spotted_cylinder_Controller : MonoBehaviour, IObstacles
         transform.Rotate(0, 0, Time.deltaTime * speed * 100);
     }
 }
+
+

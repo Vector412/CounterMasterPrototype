@@ -22,7 +22,7 @@ public class SpawnPlayers : MonoBehaviour
 
     private void Awake()
     {
-        EventManager.AddPlayers += Spawner;
+        EventManager.UpdatePlayerCount += Spawner;
     }
 
     private void Start()
@@ -33,9 +33,12 @@ public class SpawnPlayers : MonoBehaviour
         } 
     }
 
-    
-    private void Spawner(int count)
+
+   
+
+    private void Spawner(int count = 10, bool isIncrease = true)
     {
+       
         _countPlayers = 0;
         if (count < wayPoints.Count)
         {
@@ -69,7 +72,7 @@ public class SpawnPlayers : MonoBehaviour
 
     private void OnDestroy()
     {
-        EventManager.AddPlayers -= Spawner;
+        EventManager.UpdatePlayerCount -= Spawner;
     }
 
    

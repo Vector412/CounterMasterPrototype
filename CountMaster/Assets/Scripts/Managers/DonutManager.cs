@@ -12,11 +12,11 @@ public class DonutManager : MonoBehaviour
     private void Start()
     {
         donut.transform.localScale = new Vector3(1f, 1f, 1f);
-        EventManager.UpdateDonut += IncreaseDonut;
-        EventManager.MinusPlayers += DecreaseDonut;
+      EventManager.UpdatePlayerCount += UpdatedCountPlayer;
+       // EventManager.MinusPlayers += DecreaseDonut;
     }
 
-    private void ChangeScaleDonut()
+    private void ChangeScaleDonut(int count)
     {
         /*if (currentCount < 10)
         {
@@ -42,7 +42,7 @@ public class DonutManager : MonoBehaviour
         }
     }
 
-    private void IncreaseDonut(int count)
+    /*private void IncreasePlayerCount(int count)
     {
         currentCount += count;
         ChangeScaleDonut();
@@ -52,12 +52,18 @@ public class DonutManager : MonoBehaviour
     {
         currentCount--;
         ChangeScaleDonut();
+    }*/
+
+    private void UpdatedCountPlayer(int count,bool isIncrease)
+    {
+        var tmp = isIncrease? currentCount += count: currentCount -= count;
+        ChangeScaleDonut(tmp);
     }
 
 
     private void OnDestroy()
     {
-        EventManager.UpdateDonut -= IncreaseDonut;
-        EventManager.MinusPlayers -= DecreaseDonut;
+        EventManager.UpdatePlayerCount -= UpdatedCountPlayer;
+      //  EventManager.MinusPlayers -= DecreaseDonut;
     }
 }
