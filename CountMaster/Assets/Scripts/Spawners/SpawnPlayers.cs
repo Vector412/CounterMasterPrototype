@@ -17,12 +17,9 @@ public class SpawnPlayers : MonoBehaviour
     [SerializeField] private GameObject _donut;
 
     
-    private int _countPlayers = 0;
-
-
     private void Awake()
     {
-        EventManager.UpdatePlayerCount += Spawner;
+        EventManager.SpawnPlayers += Spawner;
     }
 
     private void Start()
@@ -32,14 +29,9 @@ public class SpawnPlayers : MonoBehaviour
             transform.position = new Vector3(transform.position.x, 0, 0);
         } 
     }
-
-
-   
-
-    private void Spawner(int count = 10, bool isIncrease = true)
+    
+    private void Spawner(int count)
     {
-       
-        _countPlayers = 0;
         if (count < wayPoints.Count)
         {
             var remainder = wayPoints.Count - count;
@@ -48,17 +40,12 @@ public class SpawnPlayers : MonoBehaviour
                 wayPoints.RemoveAt(0);
             }
         }
-        while (_countPlayers < count)
-        {
-            
-            for (int i = 0; i < wayPoints.Count; i++)
+        for (int i = 0; i < wayPoints.Count; i++)
             {
-              
                 var b = Instantiate(characterPrefab, wayPoints[i].transform.position, Quaternion.identity,
                     transformParent);
-                _countPlayers++;
             }
-        }
+        EventManager.OnUpdateCountPlayers(count,true);
         
     }
     
@@ -72,7 +59,7 @@ public class SpawnPlayers : MonoBehaviour
 
     private void OnDestroy()
     {
-        EventManager.UpdatePlayerCount -= Spawner;
+        EventManager.SpawnPlayers -= Spawner;
     }
 
    

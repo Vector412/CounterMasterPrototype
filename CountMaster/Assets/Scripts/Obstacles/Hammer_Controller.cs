@@ -8,6 +8,8 @@ public class Hammer_Controller : MonoBehaviour, IObstacles
     
     public bool left = false;
     public bool right = false;
+    
+    private string mainPlayer = "MainPlayer";
 
     Animator hammerController;
 
@@ -43,13 +45,10 @@ public class Hammer_Controller : MonoBehaviour, IObstacles
 
     private void OnTriggerEnter(Collider other)
     {
-      
-        if (other.gameObject.CompareTag("Player"))
-        {
-           
-            Destroy(other.gameObject);
-        }
-
-       
+        if (gameObject && !other.CompareTag(mainPlayer))
+            {
+                Destroy(other.gameObject);
+                EventManager.OnUpdateCountPlayers(1, false);
+            }
     }
 }

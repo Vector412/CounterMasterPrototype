@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44300616, g: 0.49219483, b: 0.57192373, a: 1}
+  m_IndirectSpecularColor: {r: 0.44300658, g: 0.4921953, b: 0.57192475, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -536,6 +536,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467799382}
   m_CullTransparentMesh: 1
+--- !u!1 &578808028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 578808030}
+  - component: {fileID: 578808029}
+  m_Layer: 0
+  m_Name: CountPlayersManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &578808029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578808028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97962f5fc719e664191a25cd8f8bf30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &578808030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578808028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.2981052, y: -38.8943, z: 39.849525}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &648826987
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,16 +1033,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1654312628}
   chunkPrefabs:
-  - {fileID: 2141564182468553873, guid: b0267d557b57bc64ca7eb5f7a1ac4ac4, type: 3}
-  - {fileID: 2141564182468553873, guid: d80f23bc8b0b77640a479807fc320cbf, type: 3}
-  - {fileID: 2141564182468553873, guid: d80f23bc8b0b77640a479807fc320cbf, type: 3}
-  - {fileID: 2141564182468553873, guid: d80f23bc8b0b77640a479807fc320cbf, type: 3}
-  - {fileID: 2141564182468553873, guid: d80f23bc8b0b77640a479807fc320cbf, type: 3}
+  - {fileID: 2141564182468553873, guid: cb8ed0a07da71f14e84eda99ba1b3ef9, type: 3}
+  - {fileID: 2141564182468553873, guid: e9793c896e2a76f4b88e5c7de8691fb0, type: 3}
+  - {fileID: 2141564182468553873, guid: e9793c896e2a76f4b88e5c7de8691fb0, type: 3}
+  - {fileID: 2141564182468553873, guid: e9793c896e2a76f4b88e5c7de8691fb0, type: 3}
+  - {fileID: 2141564182468553873, guid: e9793c896e2a76f4b88e5c7de8691fb0, type: 3}
   - {fileID: 2141564182468553873, guid: d80f23bc8b0b77640a479807fc320cbf, type: 3}
   firstChunk: {fileID: 2141564184350252821}
   finishChunk: {fileID: 4855265173769847454, guid: a46d259012daef84a8eebea5d8356beb, type: 3}
-  _minValueChunks: 3
-  _maxValueChunks: 3
+  _minValueChunks: 5
+  _maxValueChunks: 5
 --- !u!4 &1036030241
 Transform:
   m_ObjectHideFlags: 0
@@ -1209,7 +1252,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.5625, y: 1}
+    m_SensorSize: {x: 1.7117904, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

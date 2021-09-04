@@ -705,6 +705,9 @@
      <Reference Include="VSSettingsProvider">
      <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/VSSettingsProvider.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
      <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
@@ -725,9 +728,6 @@
      </Reference>
      <Reference Include="Unity.Recorder">
      <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>C:/Users/User/Documents/GitHub/CounterMasterPrototype/CountMaster/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

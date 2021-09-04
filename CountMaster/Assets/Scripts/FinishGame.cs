@@ -9,9 +9,8 @@ public class FinishGame : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GameObject())
+        if (other.gameObject)
         {
-            
             EventManager.GameEnd();
         }
 

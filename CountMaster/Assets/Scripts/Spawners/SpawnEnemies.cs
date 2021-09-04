@@ -28,9 +28,6 @@ public class SpawnEnemies : MonoBehaviour
     {
         var _tmp = (int) Random.Range(_minValue, _maxValue);
         _tmp *= 5;
-        Debug.Log(_tmp);
-
-
         while (_tmp > _countEnemies)
         {
             for (int i = 0; i < wayPoints.Count; i++)

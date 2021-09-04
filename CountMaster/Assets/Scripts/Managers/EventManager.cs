@@ -8,7 +8,10 @@ public static class EventManager
   
   // public  static event Action OnUpdateDonut;
    public static event Action OnGameEnd;
-   public static event Action<int,bool> UpdatePlayerCount;
+   public static event Action<int> SpawnPlayers;
+   public static event Action<int, bool> UpdateCountPlayers;
+   
+   public static event Action<int> CheckScaleDonut;
 
 
 
@@ -18,8 +21,19 @@ public static class EventManager
    }
    
 
-   public static void OnUpdatePlayerCount(int count,bool IsIncrease)
+   public static void OnSpawnPlayers(int count)
    {
-         UpdatePlayerCount?.Invoke(count,IsIncrease);
+         SpawnPlayers?.Invoke(count);
    }
+   
+   public static void OnUpdateCountPlayers(int count, bool isIncrease)
+   {
+         UpdateCountPlayers?.Invoke(count, isIncrease);
+   }
+   
+   public static void OnCheckScaleDonut(int countPlayers)
+   {
+         CheckScaleDonut?.Invoke(countPlayers);
+   }
+
 }

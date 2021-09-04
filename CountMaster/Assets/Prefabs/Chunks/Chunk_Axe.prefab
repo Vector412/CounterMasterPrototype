@@ -635,6 +635,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe
       objectReference: {fileID: 0}
+    - target: {fileID: 7457729898149835212, guid: d1ca7e47e7d54d94e956b2690008287a, type: 3}
+      propertyPath: m_Size.y
+      value: 2.892283
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457729898149835212, guid: d1ca7e47e7d54d94e956b2690008287a, type: 3}
+      propertyPath: m_Size.z
+      value: 1.9151673
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457729898149835212, guid: d1ca7e47e7d54d94e956b2690008287a, type: 3}
+      propertyPath: m_Center.y
+      value: -4.957368
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457729898149835212, guid: d1ca7e47e7d54d94e956b2690008287a, type: 3}
+      propertyPath: m_Center.z
+      value: 0.13979506
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ca7e47e7d54d94e956b2690008287a, type: 3}
 --- !u!4 &4986295185834279850 stripped

@@ -21,7 +21,7 @@ public class Counter : MonoBehaviour
        if (other.gameObject.CompareTag(_mainPlayer))
        {
            Destroy(gameObject);
-           EventManager.OnUpdatePlayerCount(count,true);
+           EventManager.OnSpawnPlayers(count);
        }
        
 

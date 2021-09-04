@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3761627687756290776}
   - component: {fileID: 1429623751857417746}
   - component: {fileID: 5343181228257066871}
-  - component: {fileID: 2873519531513555702}
+  - component: {fileID: 2952473807382576552}
+  - component: {fileID: 7296322852442012971}
   m_Layer: 0
   m_Name: Hammer_obstacle_Right
   m_TagString: Untagged
@@ -104,7 +105,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2873519531513555702
+--- !u!114 &2952473807382576552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,6 +119,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left: 0
   right: 1
+--- !u!65 &7296322852442012971
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637249771194781639}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8513145, y: 2.7381096, z: 6.9586935}
+  m_Center: {x: 0.09524965, y: 6.510438, z: 0.019448996}
 --- !u!1 &4970700775417471479
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +143,6 @@ GameObject:
   - component: {fileID: 8366667094418059136}
   - component: {fileID: 6020293775773690576}
   - component: {fileID: 6309166622813086204}
-  - component: {fileID: 4141990934020350433}
   m_Layer: 0
   m_Name: hammer_head
   m_TagString: Untagged
@@ -201,16 +214,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4141990934020350433
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4970700775417471479}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.4811354, y: 6.1300483, z: 15.102217}
-  m_Center: {x: 0, y: 2.0650244, z: 0}

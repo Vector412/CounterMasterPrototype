@@ -11,9 +11,7 @@ public class Axe_Controller : MonoBehaviour, IObstacles
 {
     public GameObject axe_handle;
     private string mainPlayer = "MainPlayer";
-    public event Action OnKill;
-    public event Action OnGameOver;
-
+  
   
 
     void Update()
@@ -25,23 +23,15 @@ public class Axe_Controller : MonoBehaviour, IObstacles
     {
         if (gameObject && !other.CompareTag(mainPlayer))
         {
-            DestroyObjects(other);
-        }
-        else if (other.CompareTag(mainPlayer))
-        {
-            OnGameOver?.Invoke();
+            Destroy(other.gameObject);
+            EventManager.OnUpdateCountPlayers(1, false);
+           
         }
     }
-
-    public void DestroyObjects(Collider col)
-    {
-        Destroy(col.gameObject);
-        OnKill?.Invoke();
-    }
-
+    
     public void Moving()
     {
-        float angle = Mathf.Sin(Time.time) * 60; //tweak this to change frequency
+        float angle = Mathf.Sin(Time.time*2) * 90; //tweak this to change frequency
 
         axe_handle.transform.localRotation = Quaternion.AngleAxis(angle, Vector3.up);
 

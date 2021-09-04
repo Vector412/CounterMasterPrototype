@@ -6,64 +6,41 @@ using UnityEngine;
 public class DonutManager : MonoBehaviour
 {
     [SerializeField] private GameObject donut;
-
-    private int currentCount;
+    
 
     private void Start()
     {
         donut.transform.localScale = new Vector3(1f, 1f, 1f);
-      EventManager.UpdatePlayerCount += UpdatedCountPlayer;
-       // EventManager.MinusPlayers += DecreaseDonut;
+        EventManager.CheckScaleDonut += ChangeScaleDonut;
     }
 
     private void ChangeScaleDonut(int count)
     {
-        /*if (currentCount < 10)
+        if (count < 10)
         {
-            donut.transform.localScale = new Vector3(1f, 1f, 1f);
-        }*/
-
-        if (currentCount < 15)
+            donut.transform.localScale = new Vector3(2f, 2f, 2f);
+        }
+        else if (count < 15)
         {
             donut.transform.localScale = new Vector3(3.5f, 0, 3.5f);
         }
 
-        if (currentCount > 15 && currentCount < 30)
+       else if (count > 15 && count < 30)
         {
             donut.transform.localScale = new Vector3(5f, 0, 5f);
         }
-        else if (currentCount > 30 && currentCount < 40)
+        else if (count > 30 && count < 40)
         {
             donut.transform.localScale = new Vector3(6, 0, 6);
         }
-        else if (currentCount > 40 && currentCount < 60)
+        else if (count > 40 && count < 60)
         {
             donut.transform.localScale = new Vector3(6.5f, 0, 6.5f);
         }
     }
 
-    /*private void IncreasePlayerCount(int count)
-    {
-        currentCount += count;
-        ChangeScaleDonut();
-    }
-
-    private void DecreaseDonut()
-    {
-        currentCount--;
-        ChangeScaleDonut();
-    }*/
-
-    private void UpdatedCountPlayer(int count,bool isIncrease)
-    {
-        var tmp = isIncrease? currentCount += count: currentCount -= count;
-        ChangeScaleDonut(tmp);
-    }
-
-
     private void OnDestroy()
     {
-        EventManager.UpdatePlayerCount -= UpdatedCountPlayer;
-      //  EventManager.MinusPlayers -= DecreaseDonut;
+        EventManager.CheckScaleDonut -= ChangeScaleDonut;
     }
 }
