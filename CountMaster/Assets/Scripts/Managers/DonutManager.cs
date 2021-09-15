@@ -18,24 +18,24 @@ public class DonutManager : MonoBehaviour
     {
         if (count < 10)
         {
-            donut.transform.localScale = new Vector3(2f, 2f, 2f);
+            donut.transform.localScale = new Vector3(1.5f, 1f, 1.5f);
         }
         else if (count < 15)
         {
-            donut.transform.localScale = new Vector3(3.5f, 0, 3.5f);
+            donut.transform.localScale = new Vector3(2.1f, 1f, 2.1f);
         }
 
        else if (count > 15 && count < 30)
         {
-            donut.transform.localScale = new Vector3(5f, 0, 5f);
+            donut.transform.localScale = new Vector3(3.1f, 1f, 3.1f);
         }
         else if (count > 30 && count < 40)
         {
-            donut.transform.localScale = new Vector3(6, 0, 6);
+            donut.transform.localScale = new Vector3(3.7f, 1f, 3.7f);
         }
         else if (count > 40 && count < 60)
         {
-            donut.transform.localScale = new Vector3(6.5f, 0, 6.5f);
+            donut.transform.localScale = new Vector3(4.1f, 1f, 4.1f);
         }
     }
 

@@ -15,6 +15,8 @@ public class SpawnPlayers : MonoBehaviour
     [SerializeField] private List<GameObject> wayPoints = new List<GameObject>();
     [SerializeField] private Transform transformParent;
     [SerializeField] private GameObject _donut;
+    [SerializeField] private GameObject wayPointsCollection;
+    private float _angle = 30;
 
     
     private void Awake()
@@ -32,6 +34,7 @@ public class SpawnPlayers : MonoBehaviour
     
     private void Spawner(int count)
     {
+        EventManager.OnUpdateCountPlayers(count, true);
         if (count < wayPoints.Count)
         {
             var remainder = wayPoints.Count - count;
@@ -45,8 +48,9 @@ public class SpawnPlayers : MonoBehaviour
                 var b = Instantiate(characterPrefab, wayPoints[i].transform.position, Quaternion.identity,
                     transformParent);
             }
-        EventManager.OnUpdateCountPlayers(count,true);
-        
+
+        wayPointsCollection.transform.rotation = Quaternion.Euler(0, _angle, 0);
+        _angle += 15;
     }
     
     private void OnDrawGizmos()

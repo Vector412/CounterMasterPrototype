@@ -33,13 +33,13 @@ public class CountPlayerManager : MonoBehaviour
         {
           //  CountPlayers.UpdateCount(count);
             CountPlayers.countPlayers += count;
-            EventManager.OnCheckScaleDonut( /*CountPlayers.countPlayers*/ count );
+            EventManager.OnCheckScaleDonut( CountPlayers.countPlayers /*count*/ );
         }
         else
         {
            // CountPlayers.UpdateCount(-count);
             CountPlayers.countPlayers  -= count;
-            EventManager.OnCheckScaleDonut( /*CountPlayers.countPlayers*/ count );
+            EventManager.OnCheckScaleDonut( CountPlayers.countPlayers /*count*/ );
         }
     }
 
