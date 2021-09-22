@@ -9,8 +9,8 @@ public class Spotted_cylinder_Controller : MonoBehaviour, IObstacles
     public float _speed;
     private float speed;
     private string mainPlayer = "MainPlayer";
-    
-    
+
+  
     private void Awake()
     {
     }
@@ -34,7 +34,9 @@ public class Spotted_cylinder_Controller : MonoBehaviour, IObstacles
             Destroy(other.gameObject);
             EventManager.OnUpdateCountPlayers(1, false);
            
+           
         }
+        
         /*else if(other.CompareTag(mainPlayer))
         {
             if (CountPlayers.countPlayers == 1)

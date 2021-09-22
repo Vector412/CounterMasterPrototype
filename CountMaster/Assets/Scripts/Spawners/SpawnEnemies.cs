@@ -24,7 +24,7 @@ public class SpawnEnemies : MonoBehaviour
     }
 
 
-    public void CreateEnemies()
+    private void CreateEnemies()
     {
         var _tmp = (int) Random.Range(_minValue, _maxValue);
         _tmp *= 5;
@@ -38,16 +38,4 @@ public class SpawnEnemies : MonoBehaviour
         }
     }
     
-    
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("MainPlayer") )
-        {
-           
-        }
-    }*/
-
-
- 
 }

@@ -656,6 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 4388953103993823366}
+  target: {fileID: 6953157231929948327, guid: 7e01e0309dbe685408e4c002277374a0, type: 3}
 --- !u!1 &6613654586207385303
 GameObject:
   m_ObjectHideFlags: 0

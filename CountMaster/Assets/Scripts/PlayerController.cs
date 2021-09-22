@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,12 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     public ParticleSystem deathParticle;
     private Animator playerAnimationController;
-
-    private void Enable()
+    public GameObject target;
+    
+   
+    private void Start()
     {
-        
     }
-
 
     public void OnDestroy()
     {
@@ -20,4 +21,9 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        
+      
+    }
 }
