@@ -1296,6 +1296,7 @@ MonoBehaviour:
   - {fileID: 945959788}
   transformParent: {fileID: 6953157231929948320}
   _donut: {fileID: 3712070078004903949}
+  wayPointsCollection: {fileID: 0}
 --- !u!114 &1654312631
 MonoBehaviour:
   m_ObjectHideFlags: 0

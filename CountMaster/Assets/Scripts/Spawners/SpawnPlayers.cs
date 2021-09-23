@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class SpawnPlayers : MonoBehaviour
 {
-    [SerializeField] private GameObject characterPrefab;
+    [SerializeField] private Friendly characterPrefab;
 
     [Tooltip("Радиус в котором будут спауниться персы")] [SerializeField]
     private float radius;
@@ -15,9 +15,8 @@ public class SpawnPlayers : MonoBehaviour
     [SerializeField] private List<GameObject> wayPoints = new List<GameObject>();
     [SerializeField] private Transform transformParent;
     [SerializeField] private GameObject _donut;
-    [SerializeField] private GameObject wayPointsCollection;
     private float _angle = 30;
-
+    private Friendly friendly;
     
     private void Awake()
     {
@@ -47,10 +46,9 @@ public class SpawnPlayers : MonoBehaviour
             {
                 var b = Instantiate(characterPrefab, wayPoints[i].transform.position, Quaternion.identity,
                     transformParent);
+                EventManager.OnSpawnFriendlyPlayers(b);
             }
-
-        wayPointsCollection.transform.rotation = Quaternion.Euler(0, _angle, 0);
-        _angle += 15;
+        
     }
     
     private void OnDrawGizmos()

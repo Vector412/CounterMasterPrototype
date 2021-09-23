@@ -53,7 +53,6 @@
      <Compile Include="Assets\Scripts\TouchHandle.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
-     <Compile Include="Assets\Scripts\CountPlayerManager.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
      <Compile Include="Assets\Scripts\FinishGame.cs" />
      <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
@@ -88,9 +87,12 @@
      <Compile Include="Assets\Scripts\Dead.cs" />
      <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
+     <Compile Include="Assets\Scripts\CountArea.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
      <Compile Include="Assets\Scripts\Obstacles\Spotted_cylinder_Controller.cs" />
-     <Compile Include="Assets\Scripts\CountArea.cs" />
+     <Compile Include="Assets\Scripts\Enemies.cs" />
+     <Compile Include="Assets\Scripts\Friendly.cs" />
+     <Compile Include="Assets\Scripts\FriendlyManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\SG2_Template_URP.txt" />
      <None Include="Assets\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />

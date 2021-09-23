@@ -40,6 +40,7 @@ public class CountArea : MonoBehaviour
         else
         {
             players -= count;
+            Debug.Log(players);
         }
         
         ChangeScaleDonut(players, isIncrease);
